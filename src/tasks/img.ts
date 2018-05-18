@@ -4,7 +4,7 @@ import {
   window,
   Position,
 } from 'vscode';
-import * as _ from 'lodash';
+import {template} from 'lodash';
 
 // types没有的模块
 const clipboardy = require('clipboardy');
@@ -81,7 +81,7 @@ export const readImg = async (action = {
 export const renderString = (width: number, height: number, src: string): string => {
   // 拼接字符串
   const tpl: string = (getConfig('tpl') || defaults.tpl).replace(/;/g, ';\n\t').replace(/\n\t$/, '');
-  const compiled: Function = _.template(tpl);
+  const compiled: Function = template(tpl);
   const {
     activeTextEditor
   } = window;
