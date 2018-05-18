@@ -2,7 +2,7 @@
     "name": "img-style",
     "displayName": "img-style",
     "description": "insert css with width height url by cal images size",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "linzhi19",
     "baseImagesUrl": "preview.gif",
     "engines": {

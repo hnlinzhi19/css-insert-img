@@ -5,11 +5,12 @@ import {
   Position,
 } from 'vscode';
 import {template} from 'lodash';
+import {read} from 'jimp';
 
 // types没有的模块
 const clipboardy = require('clipboardy');
 const globby = require('globby');
-const jimp = require('jimp');
+// const jimp = require('jimp');
 // 默认配置
 const defaults = {
   imgPath: 'src/**/*.{png,jpg,gif,webp}',
@@ -67,7 +68,7 @@ export const readImg = async (action = {
   if (!action.src) {
     return;
   }
-  const imgInfo = await jimp.read(action.src);
+  const imgInfo = await read(action.src);
   // console.log('imgInfo', imgInfo.bitmap.width);
   const {
     width,
