@@ -3,7 +3,7 @@
 - 支持配置模板
 - 支持路径过滤
 
-
+![Alt text](./preview.gif)
 ## 配置模板
 模板生成参考使用的 [loadash.template](https://github.com/lodash/lodash)
 ```
