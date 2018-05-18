@@ -1,0 +1,64 @@
+{
+    "name": "img-style",
+    "displayName": "img-style",
+    "description": "insert css with width height url by cal images size",
+    "version": "0.0.1",
+    "publisher": "linzhi19",
+    "engines": {
+        "vscode": "^1.23.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.imgInsert"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.imgInsert",
+                "title": "image insert"
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "imgstyle configuration",
+            "properties": {
+                "imgstyle.tpl": {
+                    "type": "string",
+                    "default": "test",
+                    "description": "imgstyle path settings"
+                },
+                "imgstyle.path": {
+                    "type": "Array",
+                    "default": [
+                        "src/**/*.{png,jpg,gif,webp}"
+                    ],
+                    "description": "imgstyle path settings"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^7.0.43",
+        "tslint": "^5.8.0",
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.17"
+    },
+    "dependencies": {
+        "@types/lodash": "^4.14.108",
+        "clipboardy": "^1.2.3",
+        "globby": "^8.0.1",
+        "jimp": "^0.2.28",
+        "lodash": "^4.17.10"
+    }
+}
