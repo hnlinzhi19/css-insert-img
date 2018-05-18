@@ -13,13 +13,19 @@
     ],
     "repository":"https://github.com/hnlinzhi19/css-insert-img",
     "activationEvents": [
-        "onCommand:extension.imgInsert"
+        "onCommand:linz.imgInsert"
     ],
     "main": "./out/extension",
     "contributes": {
+        "keybindings": [{
+            "command": "linz.imgInsert",
+            "key": "ctrl+4",
+            "mac": "cmd+4",
+            "when": "editorTextFocus"
+        }],
         "commands": [
             {
-                "command": "extension.imgInsert",
+                "command": "linz.imgInsert",
                 "title": "image insert"
             }
         ],
